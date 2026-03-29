@@ -1,0 +1,135 @@
+2026-03-02 18:28:30: 
+2026-03-02 18:28:30: ╭────────────────────────────────────────────────────────────────╮
+2026-03-02 18:28:30: │                                                                │
+2026-03-02 18:28:30: │  AI EMPLOYEE — INBOX WATCHER                                   │
+2026-03-02 18:28:30: │  Perception Layer v0.1  •  Local-First  •  Autonomous          │
+2026-03-02 18:28:30: │                                                                │
+2026-03-02 18:28:30: │  Monitoring: /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox         │
+2026-03-02 18:28:30: │  Output:     /mnt/c/h-0/AI_Employee_Vault_bronze/Needs_Action  │
+2026-03-02 18:28:30: │  Logs:       /mnt/c/h-0/AI_Employee_Vault_bronze/Logs          │
+2026-03-02 18:28:30: │                                                                │
+2026-03-02 18:28:30: ╰────────────────────────────────────────────────────────────────╯
+2026-03-02 18:28:30: 
+2026-03-02 18:28:30: [18:28:30] INFO     Watcher started — monitoring                                
+2026-03-02 18:28:30:                     /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox                   
+2026-03-02 18:28:48: [18:28:48] INFO     ✓ Created TASK_20260302T132848.md  ←  gold_tier_test.md     
+2026-03-02 18:31:48: [18:31:48] INFO     ✓ Created TASK_20260302T133148.md  ←  gold_odoo_invoice.md  
+2026-03-02 18:31:49: [18:31:49] INFO     ✓ Created TASK_20260302T133149.md  ←  gold_linkedin_post.md 
+2026-03-02 18:31:49:            INFO     ✓ Created TASK_20260302T133149.md  ←  gold_twitter_post.md  
+2026-03-02 18:31:50: [18:31:50] INFO     ✓ Created TASK_20260302T133150.md  ←  gold_facebook_post.md 
+2026-03-06 19:55:57: 
+2026-03-06 19:55:57: ╭────────────────────────────────────────────────────────────────╮
+2026-03-06 19:55:57: │                                                                │
+2026-03-06 19:55:57: │  AI EMPLOYEE — INBOX WATCHER                                   │
+2026-03-06 19:55:57: │  Perception Layer v0.1  •  Local-First  •  Autonomous          │
+2026-03-06 19:55:57: │                                                                │
+2026-03-06 19:55:57: │  Monitoring: /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox         │
+2026-03-06 19:55:57: │  Output:     /mnt/c/h-0/AI_Employee_Vault_bronze/Needs_Action  │
+2026-03-06 19:55:57: │  Logs:       /mnt/c/h-0/AI_Employee_Vault_bronze/Logs          │
+2026-03-06 19:55:57: │                                                                │
+2026-03-06 19:55:57: ╰────────────────────────────────────────────────────────────────╯
+2026-03-06 19:55:57: 
+2026-03-06 19:55:57: [19:55:57] INFO     Watcher started — monitoring                                
+2026-03-06 19:55:57:                     /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox                   
+2026-03-06 19:57:06: [19:57:06] INFO     ✓ Created TASK_20260306T145706.md  ←  test_odoo_invoice.md  
+2026-03-06 19:57:10: [19:57:10] INFO     ✓ Created TASK_20260306T145710.md  ←  test_linkedin_post.md 
+2026-03-06 19:57:14: [19:57:14] INFO     ✓ Created TASK_20260306T145714.md  ←  test_facebook_post.md 
+2026-03-06 19:57:16: [19:57:16] INFO     ✓ Created TASK_20260306T145716.md  ←  test_twitter_post.md  
+2026-03-06 19:57:18: [19:57:18] INFO     ✓ Created TASK_20260306T145718.md  ←  test_instagram_post.md
+2026-03-06 19:57:22: [19:57:22] INFO     ✓ Created TASK_20260306T145722.md  ←  test_gmail_send.md    
+2026-03-06 19:57:24: [19:57:24] INFO     ✓ Created TASK_20260306T145724.md  ←  test_ceo_briefing.md  
+2026-03-06 20:13:15: [20:13:15] INFO     ✓ Created TASK_20260306T151315.md  ←  run_odoo_v2.md        
+2026-03-06 20:13:15:            INFO     ✓ Created TASK_20260306T151315.md  ←  run_linkedin_v2.md    
+2026-03-06 20:13:16: [20:13:16] INFO     ✓ Created TASK_20260306T151316.md  ←  run_facebook_v2.md    
+2026-03-06 20:13:17: [20:13:17] INFO     ✓ Created TASK_20260306T151317.md  ←  run_twitter_v2.md     
+2026-03-06 20:13:19: [20:13:18] INFO     ✓ Created TASK_20260306T151318.md  ←  run_gmail_v2.md       
+2026-03-06 20:13:19: [20:13:19] INFO     ✓ Created TASK_20260306T151319.md  ←  run_instagram_v2.md   
+2026-03-06 20:16:36: [20:16:36] INFO     Received SIGINT — shutting down gracefully…                 
+2026-03-06 20:16:36: ╭──────────────────────────────────────────────────────────────────────────────╮
+2026-03-06 20:16:36: │                                                                              │
+2026-03-06 20:16:36: │    AI EMPLOYEE — INBOX WATCHER                                               │
+2026-03-06 20:16:36: │                                                                              │
+2026-03-06 20:16:36: ╰──────────────────────────────────────────────────────────────────────────────╯
+2026-03-06 20:16:36: ╭──────────────────────────────────────╮╭──────────────────────────────────────╮
+2026-03-06 20:16:36: │              Watcher Status          ││             Recent Tasks             │
+2026-03-06 20:16:36: │ ┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━ ││ ┏━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━━┓ │
+2026-03-06 20:16:36: │ ┃ Metric             ┃ Value         ││ ┃      ┃ Task   ┃        ┃         ┃ │
+2026-03-06 20:16:36: │ ┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━ ││ ┃ #    ┃ File   ┃ Source ┃ Time    ┃ │
+2026-03-06 20:16:36: │ │ Status             │ ● ONLINE      ││ ┡━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━━┩ │
+2026-03-06 20:16:36: │ ├────────────────────┼────────────── ││ │ 1    │ TASK_… │ run_i… │ 15:13:… │ │
+2026-03-06 20:16:36: │ │ Uptime             │ 00h 20m 38s   ││ │ 2    │ TASK_… │ run_g… │ 15:13:… │ │
+2026-03-06 20:16:36: │ ├────────────────────┼────────────── ││ │ 3    │ TASK_… │ run_t… │ 15:13:… │ │
+2026-03-06 20:16:36: │ │ Monitoring         │ /mnt/c/h-0/AI ││ │ 4    │ TASK_… │ run_f… │ 15:13:… │ │
+2026-03-06 20:16:36: │ ├────────────────────┼────────────── ││ │ 5    │ TASK_… │ run_l… │ 15:13:… │ │
+2026-03-06 20:16:36: │ │ Inbox Files        │ 18            ││ │ 6    │ TASK_… │ run_o… │ 15:13:… │ │
+2026-03-06 20:16:36: │ ├────────────────────┼────────────── ││ │ 7    │ TASK_… │ test_… │ 14:57:… │ │
+2026-03-06 20:16:36: │ │ Needs Action       │ 0             ││ │ 8    │ TASK_… │ test_… │ 14:57:… │ │
+2026-03-06 20:16:36: │ ├────────────────────┼────────────── ││ │ 9    │ TASK_… │ test_… │ 14:57:… │ │
+2026-03-06 20:16:36: │ │ Processed          │ 13            ││ │ 10   │ TASK_… │ test_… │ 14:57:… │ │
+2026-03-06 20:16:36: ╰──────────────────────────────────────╯╰──────────────────────────────────────╯
+2026-03-06 20:16:36: ╭──────────────────────────────────────────────────────────────────────────────╮
+2026-03-06 20:16:36: │ Press Ctrl+C to stop  •  Logs → Logs/watcher.log  •  Polling every 2s        │
+2026-03-06 20:16:36: 
+2026-03-06 20:16:36: ╭─────────────────────────────────╮
+2026-03-06 20:16:36: │ Watcher stopped.                │
+2026-03-06 20:16:36: │ Processed 13 files  •  0 errors │
+2026-03-06 20:16:36: ╰─────────────────────────────────╯
+2026-03-06 20:16:37: 
+2026-03-06 20:16:37: ╭────────────────────────────────────────────────────────────────╮
+2026-03-06 20:16:37: │                                                                │
+2026-03-06 20:16:37: │  AI EMPLOYEE — INBOX WATCHER                                   │
+2026-03-06 20:16:37: │  Perception Layer v0.1  •  Local-First  •  Autonomous          │
+2026-03-06 20:16:37: │                                                                │
+2026-03-06 20:16:37: │  Monitoring: /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox         │
+2026-03-06 20:16:37: │  Output:     /mnt/c/h-0/AI_Employee_Vault_bronze/Needs_Action  │
+2026-03-06 20:16:37: │  Logs:       /mnt/c/h-0/AI_Employee_Vault_bronze/Logs          │
+2026-03-06 20:16:37: │                                                                │
+2026-03-06 20:16:37: ╰────────────────────────────────────────────────────────────────╯
+2026-03-06 20:16:37: 
+2026-03-06 20:16:37: [20:16:37] INFO     Watcher started — monitoring                                
+2026-03-06 20:16:37:                     /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox                   
+2026-03-07 16:08:54: 
+2026-03-07 16:08:54: ╭────────────────────────────────────────────────────────────────╮
+2026-03-07 16:08:54: │                                                                │
+2026-03-07 16:08:54: │  AI EMPLOYEE — INBOX WATCHER                                   │
+2026-03-07 16:08:54: │  Perception Layer v0.1  •  Local-First  •  Autonomous          │
+2026-03-07 16:08:54: │                                                                │
+2026-03-07 16:08:54: │  Monitoring: /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox         │
+2026-03-07 16:08:54: │  Output:     /mnt/c/h-0/AI_Employee_Vault_bronze/Needs_Action  │
+2026-03-07 16:08:54: │  Logs:       /mnt/c/h-0/AI_Employee_Vault_bronze/Logs          │
+2026-03-07 16:08:54: │                                                                │
+2026-03-07 16:08:54: ╰────────────────────────────────────────────────────────────────╯
+2026-03-07 16:08:54: 
+2026-03-07 16:08:54: [16:08:54] INFO     Watcher started — monitoring                                
+2026-03-07 16:08:54:                     /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox                   
+2026-03-07 16:09:14: [16:09:14] INFO     ✓ Created TASK_20260307T110914_229.md  ←  test_twitter.md   
+2026-03-07 16:09:14:            INFO     ✓ Created TASK_20260307T110914_839.md  ←  test_instagram.md 
+2026-03-07 16:09:15: [16:09:15] INFO     ✓ Created TASK_20260307T110915_425.md  ←  test_linkedin.md  
+2026-03-07 16:09:15:            INFO     ✓ Created TASK_20260307T110915_960.md  ←  test_odoo.md      
+2026-03-07 16:09:16: [16:09:16] INFO     ✓ Created TASK_20260307T110916_501.md  ←  test_facebook.md  
+2026-03-07 16:09:17: [16:09:17] INFO     ✓ Created TASK_20260307T110917_088.md  ←  test_gmail.md     
+2026-03-07 16:29:11: [16:29:11] INFO     ✓ Created TASK_20260307T112911_454.md  ←  e2e_instagram.md  
+2026-03-07 16:29:12: [16:29:12] INFO     ✓ Created TASK_20260307T112912_378.md  ←  e2e_facebook.md   
+2026-03-07 16:29:12:            INFO     ✓ Created TASK_20260307T112912_930.md  ←  e2e_twitter.md    
+2026-03-07 16:41:13: [16:41:13] INFO     ✓ Created TASK_20260307T114113_854.md  ←  e2e_ig2.md        
+2026-03-07 16:41:14: [16:41:14] INFO     ✓ Created TASK_20260307T114114_379.md  ←  e2e_tw2.md        
+2026-03-07 16:41:14:            INFO     ✓ Created TASK_20260307T114114_909.md  ←  e2e_fb2.md        
+2026-03-07 16:53:23: [16:53:23] INFO     ✓ Created TASK_20260307T115323_110.md  ←  e2e_fb3.md        
+2026-03-07 16:53:23:            INFO     ✓ Created TASK_20260307T115323_671.md  ←  e2e_tw3.md        
+2026-03-07 16:53:24: [16:53:24] INFO     ✓ Created TASK_20260307T115324_278.md  ←  e2e_ig3.md        
+2026-03-07 17:06:42: [17:06:42] INFO     ✓ Created TASK_20260307T120642_288.md  ←  e2e_tw4.md        
+2026-03-07 17:06:42:            INFO     ✓ Created TASK_20260307T120642_843.md  ←  e2e_ig4.md        
+2026-03-08 06:51:04: 
+2026-03-08 06:51:04: ╭────────────────────────────────────────────────────────────────╮
+2026-03-08 06:51:04: │                                                                │
+2026-03-08 06:51:04: │  AI EMPLOYEE — INBOX WATCHER                                   │
+2026-03-08 06:51:04: │  Perception Layer v0.1  •  Local-First  •  Autonomous          │
+2026-03-08 06:51:04: │                                                                │
+2026-03-08 06:51:04: │  Monitoring: /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox         │
+2026-03-08 06:51:04: │  Output:     /mnt/c/h-0/AI_Employee_Vault_bronze/Needs_Action  │
+2026-03-08 06:51:04: │  Logs:       /mnt/c/h-0/AI_Employee_Vault_bronze/Logs          │
+2026-03-08 06:51:04: │                                                                │
+2026-03-08 06:51:04: ╰────────────────────────────────────────────────────────────────╯
+2026-03-08 06:51:04: 
+2026-03-08 06:51:04: [06:51:04] INFO     Watcher started — monitoring                                
+2026-03-08 06:51:04:                     /mnt/c/h-0/AI_Employee_Vault_bronze/Inbox                   

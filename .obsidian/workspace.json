@@ -1,0 +1,233 @@
+{
+  "main": {
+    "id": "15d2b7e34b99a169",
+    "type": "split",
+    "children": [
+      {
+        "id": "e837412bf12d315f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60480b471b09750e",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Logs/twitter_post_20260308T015356.png"
+              },
+              "icon": "lucide-image",
+              "title": "twitter_post_20260308T015356"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f4095d16fb8b9538",
+    "type": "split",
+    "children": [
+      {
+        "id": "a6deacc15357cfe9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "129d499811d79132",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f32a9c9a6172d92f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b59d2c466caa7307",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 321.5
+  },
+  "right": {
+    "id": "8e47ab54400f5ab5",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e58f80125d89e05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65504f5e6ade00df",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Needs_Action/TASK_20260215T050155.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for TASK_20260215T050155"
+            }
+          },
+          {
+            "id": "d6082fc08a1e1ed9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Needs_Action/TASK_20260215T050155.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from TASK_20260215T050155"
+            }
+          },
+          {
+            "id": "5e6ecd2d75b566d8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7cbc568cebd50c03",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "7f9a3dfe8a4d5db7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Needs_Action/TASK_20260215T050155.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of TASK_20260215T050155"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "60480b471b09750e",
+  "lastOpenFiles": [
+    "task.md",
+    "heagent-dashboard/node_modules/style-to-object/src/index.ts",
+    "heagent-dashboard/node_modules/style-to-object/src",
+    "heagent-dashboard/node_modules/style-to-js/src/index.ts",
+    "heagent-dashboard/node_modules/style-to-js/src/utilities.ts",
+    "heagent-dashboard/node_modules/style-to-js/src/utilities.test.ts",
+    "heagent-dashboard/node_modules/style-to-js/src/index.test.ts",
+    "heagent-dashboard/node_modules/style-to-js/src",
+    "heagent-dashboard/node_modules/next/next-swc-fallback/@next/swc-linux-x64-musl/next-swc.linux-x64-musl.node",
+    "heagent-dashboard/node_modules/next/next-swc-fallback/@next/swc-linux-x64-musl/README.md",
+    "heagent-dashboard/node_modules/next/next-swc-fallback/@next/swc-linux-x64-musl/package.json",
+    "heagent-dashboard/node_modules/next/next-swc-fallback/@next/swc-linux-x64-musl",
+    "heagent-dashboard/node_modules/next/next-swc-fallback/@next/swc-linux-x64-gnu/README.md",
+    "heagent-dashboard/node_modules/next/dist/compiled/react-refresh/README.md",
+    "heagent-dashboard/node_modules/next/dist/compiled/regenerator-runtime/README.md",
+    "heagent-dashboard/node_modules/next/dist/compiled/react-is/README.md",
+    "heagent-dashboard/node_modules/micromark-core-commonmark/readme.md",
+    "heagent-dashboard/node_modules/eslint-plugin-import/CHANGELOG.md",
+    "heagent-dashboard/node_modules/hasown/README.md",
+    "heagent-dashboard/node_modules/define-properties/README.md",
+    "heagent-dashboard/node_modules/set-function-length/CHANGELOG.md",
+    "heagent-dashboard/node_modules/get-intrinsic/CHANGELOG.md",
+    "heagent-dashboard/node_modules/dequal/readme.md",
+    "heagent-dashboard/node_modules/eventemitter3/README.md",
+    "heagent-dashboard/node_modules/@typescript-eslint/visitor-keys/node_modules/eslint-visitor-keys/README.md",
+    "heagent-dashboard/node_modules/debug/README.md",
+    "heagent-dashboard/node_modules/@humanfs/core/README.md",
+    "heagent-dashboard/node_modules/next/README.md",
+    "heagent-dashboard/node_modules/next/dist/compiled/@babel/runtime/README.md",
+    "heagent-dashboard/node_modules/next/license.md",
+    "heagent-dashboard/node_modules/semver/README.md",
+    "heagent-dashboard/node_modules/jiti/README.md",
+    "heagent-dashboard/node_modules/json5/LICENSE.md",
+    "heagent-dashboard/node_modules/victory-vendor/README.md",
+    "heagent-dashboard/node_modules/victory-vendor/CHANGELOG.md",
+    "heagent-dashboard/node_modules/eslint-plugin-jsx-a11y/CHANGELOG.md",
+    "Logs/twitter_post_20260308T020036.png",
+    "Logs/twitter_post_20260307T120721.png",
+    "Logs/twitter_post_20260307T134352.png",
+    "Logs/twitter_post_20260308T015356.png",
+    "Logs/instagram_post_20260308T015147.png",
+    "Logs/instagram_post_20260307T134043.png",
+    "Logs/ig_modal_20260308T015213.png",
+    "Logs/ig_auto_20260308T015146.jpg",
+    "Logs/instagram_post_20260304T122356.png",
+    "Logs/instagram_post_20260307T132634.png"
+  ]
+}

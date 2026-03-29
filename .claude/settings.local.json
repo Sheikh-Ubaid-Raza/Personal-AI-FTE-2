@@ -1,0 +1,6 @@
+{
+  "enabledMcpjsonServers": [
+    "odoo-accounting"
+  ],
+  "enableAllProjectMcpServers": true
+}

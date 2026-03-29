@@ -1,0 +1,6 @@
+2026-03-07 16:08:56: 
+2026-03-07 16:08:56: Authenticating with Gmail API…
+2026-03-07 16:08:58: Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=99717247100-fefq3c1kii2ftr2bbfpfo34u9khk0osg.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A57247%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&state=pVWiNagCwWUXSfO14dRUGPMQADX323&access_type=offline
+2026-03-08 06:51:06: 
+2026-03-08 06:51:06: Authenticating with Gmail API…
+2026-03-08 06:51:07: Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=99717247100-fefq3c1kii2ftr2bbfpfo34u9khk0osg.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A47383%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&state=7EwtR9okyjmJ2mBtMGjwYJcw81d9SS&access_type=offline

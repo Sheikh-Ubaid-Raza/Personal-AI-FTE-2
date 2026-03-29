@@ -1,0 +1,31 @@
+============================================================
+  Facebook Session Initializer
+============================================================
+  Session dir  : .fb_session
+  Signal file  : /tmp/fb_session_done
+
+  A Chromium browser window will open.
+  → Log in to Facebook manually
+  → Complete any 2FA / security check
+  → Once you see the HOME FEED, run:
+
+       touch /tmp/fb_session_done
+
+  You have 5 minutes. Starting browser ...
+
+  Navigating to facebook.com ...
+  Browser open — waiting for signal file ...
+  Still waiting ... (30s / 300s)
+  Still waiting ... (60s / 300s)
+  Still waiting ... (90s / 300s)
+  Still waiting ... (120s / 300s)
+  Still waiting ... (150s / 300s)
+  Still waiting ... (180s / 300s)
+  Still waiting ... (210s / 300s)
+  Still waiting ... (240s / 300s)
+  Still waiting ... (270s / 300s)
+  Still waiting ... (300s / 300s)
+  Timeout reached — saving session as-is.
+
+  Session saved. Files in .fb_session/: 15
+  Done.

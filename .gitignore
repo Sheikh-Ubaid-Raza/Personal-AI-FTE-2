@@ -1,0 +1,26 @@
+# Secrets — NEVER commit these
+.env
+credentials.json
+token.json
+
+# Browser session directories (contain auth cookies)
+.linkedin_session/
+.fb_session/
+.ig_session/
+.x_session/
+
+# Runtime state (ephemeral)
+Logs/ralph_state.json
+Logs/*.png
+Logs/*.jpg
+
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+node_modules

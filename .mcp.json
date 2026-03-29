@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "odoo-accounting": {
+      "command": "python3",
+      "args": [
+        "/mnt/c/h-0/Ai_employee_vault_bronze/.claude/mcp-servers/odoo-mcp/server.py"
+      ]
+    }
+  }
+}
