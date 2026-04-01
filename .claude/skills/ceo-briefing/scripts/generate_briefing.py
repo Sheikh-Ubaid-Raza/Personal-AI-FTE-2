@@ -3,8 +3,9 @@ AI Employee — CEO Briefing Skill (Intelligence Layer)
 Generates the weekly "Monday Morning CEO Briefing" in Briefings/.
 
 Data sources:
-  • Done/          — completed tasks from the last N days (filesystem)
-  • Odoo JSON-RPC  — revenue, invoices, overdue AR (optional; skipped if offline)
+  • Done/              — completed tasks from the last N days (filesystem)
+  • Odoo JSON-RPC      — revenue, invoices, overdue AR (optional; skipped if offline)
+  • Business_Goals.md  — strategic targets for variance analysis (Gold Tier)
 
 Usage:
     python generate_briefing.py [--days 7] [--task-id TASK_ID]
@@ -22,11 +23,12 @@ import requests
 from dotenv import load_dotenv
 
 # ── Paths ─────────────────────────────────────────────────────────────
-VAULT     = Path(__file__).resolve().parent.parent.parent.parent.parent
-DONE      = VAULT / "Done"
-BRIEFINGS = VAULT / "Briefings"
-LOGS      = VAULT / "Logs"
-DASHBOARD = VAULT / "Dashboard.md"
+VAULT           = Path(__file__).resolve().parent.parent.parent.parent.parent
+DONE            = VAULT / "Done"
+BRIEFINGS       = VAULT / "Briefings"
+LOGS            = VAULT / "Logs"
+DASHBOARD       = VAULT / "Dashboard.md"
+BUSINESS_GOALS  = VAULT / "Business_Goals.md"
 
 load_dotenv(VAULT / ".env")
 
@@ -88,6 +90,78 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
             continue
         fm[line[:idx].strip()] = line[idx + 1:].strip().strip('"').strip("'")
     return fm, match.group(2)
+
+
+# ── Business Goals Parser (Gold Tier) ─────────────────────────────────
+
+def parse_business_goals() -> dict:
+    """
+    Parse Business_Goals.md to extract targets for variance analysis.
+    Returns dict with revenue_target, metrics, projects, etc.
+    """
+    if not BUSINESS_GOALS.exists():
+        return {
+            "available": False,
+            "monthly_revenue_target": 10000.0,  # default
+            "client_response_hours": 24,
+            "invoice_payment_rate": 90,
+            "tasks_per_week": 20,
+        }
+    
+    try:
+        text = BUSINESS_GOALS.read_text(encoding="utf-8")
+        fm, body = parse_frontmatter(text)
+        
+        # Parse metrics table from body
+        metrics = {}
+        projects = []
+        
+        # Extract revenue target from body
+        revenue_match = re.search(r'\*\*Monthly Goal:\*\*\s*\$?([\d,]+)', body)
+        monthly_revenue = float(revenue_match.group(1).replace(',', '')) if revenue_match else 10000.0
+        
+        # Parse metrics table
+        table_match = re.search(r'\| Metric \|.*?\| Current \|', body, re.DOTALL)
+        if table_match:
+            table_text = table_match.group(0)
+            # Extract Client Response Time target
+            response_match = re.search(r'Client Response Time.*?\|\s*<\s*(\d+)\s*hours', table_text)
+            metrics["client_response_hours"] = int(response_match.group(1)) if response_match else 24
+            
+            # Extract Invoice Payment Rate target
+            payment_match = re.search(r'Invoice Payment Rate.*?\|\s*>\s*(\d+)%', table_text)
+            metrics["invoice_payment_rate"] = int(payment_match.group(1)) if payment_match else 90
+            
+            # Extract Tasks/Week target
+            tasks_match = re.search(r'Tasks Completed/Week.*?\|\s*>\s*(\d+)', table_text)
+            metrics["tasks_per_week"] = int(tasks_match.group(1)) if tasks_match else 20
+        
+        # Parse active projects
+        project_matches = re.findall(r'\|\s*\d+\s*\|\s*\*\*([^*]+)\*\*\s*\|.*?\|\s*\$([\d,]+)\s*\|', body)
+        for proj_name, budget in project_matches:
+            projects.append({
+                "name": proj_name.strip(),
+                "budget": float(budget.replace(',', '')),
+            })
+        
+        return {
+            "available": True,
+            "monthly_revenue_target": monthly_revenue,
+            "client_response_hours": metrics.get("client_response_hours", 24),
+            "invoice_payment_rate": metrics.get("invoice_payment_rate", 90),
+            "tasks_per_week": metrics.get("tasks_per_week", 20),
+            "projects": projects,
+        }
+        
+    except Exception as e:
+        print(f"  [Warning] Could not parse Business_Goals.md: {e}")
+        return {
+            "available": False,
+            "monthly_revenue_target": 10000.0,
+            "client_response_hours": 24,
+            "invoice_payment_rate": 90,
+            "tasks_per_week": 20,
+        }
 
 
 # ── Odoo JSON-RPC Client ──────────────────────────────────────────────
@@ -340,8 +414,8 @@ def fetch_financial_data(since: datetime) -> dict:
 
 # ── Briefing Renderer ─────────────────────────────────────────────────
 
-def render_briefing(since: datetime, vault_data: dict, fin: dict) -> str:
-    """Render the full CEO Briefing markdown."""
+def render_briefing(since: datetime, vault_data: dict, fin: dict, goals: dict) -> str:
+    """Render the full CEO Briefing markdown with Business Goals variance analysis."""
     now       = datetime.now(timezone.utc)
     today_str = now.strftime("%Y-%m-%d")
     since_str = since.strftime("%Y-%m-%d")
@@ -351,6 +425,19 @@ def render_briefing(since: datetime, vault_data: dict, fin: dict) -> str:
     bottlenecks = vault_data["bottlenecks"]
     skill_counts = vault_data["skill_counts"]
     total       = vault_data["total"]
+    
+    # ── Business Goals Variance Analysis ──────────────────────────────
+    revenue_target = goals.get("monthly_revenue_target", 10000.0)
+    response_target = goals.get("client_response_hours", 24)
+    tasks_target = goals.get("tasks_per_week", 20)
+    
+    # Calculate variances
+    revenue_pct = (fin.get("week_revenue", 0) / revenue_target) * 100 if revenue_target else 0
+    tasks_variance = "✓" if total >= tasks_target else "⚠️"
+    
+    # Response time analysis (from bottlenecks)
+    avg_delay = sum(b["delay_hours"] for b in bottlenecks) / len(bottlenecks) if bottlenecks else 0
+    response_variance = "✓" if avg_delay <= response_target else "⚠️"
 
     # ── Executive Summary ─────────────────────────────────────────────
     if fin.get("odoo_online"):
@@ -363,6 +450,15 @@ def render_briefing(since: datetime, vault_data: dict, fin: dict) -> str:
         fin_summary = (
             f"{total} task(s) completed this week; "
             f"Odoo offline — financial data unavailable."
+        )
+    
+    # Add goals comparison
+    if goals.get("available"):
+        fin_summary += (
+            f"\n\n**vs. Goals:** "
+            f"Revenue {revenue_pct:.1f}% of ${revenue_target:,.0f} target | "
+            f"Tasks {tasks_variance} ({total}/{tasks_target}) | "
+            f"Response {response_variance} ({avg_delay:.1f}h avg)"
         )
 
     # ── Revenue Section ───────────────────────────────────────────────
@@ -500,7 +596,14 @@ def run(days: int = 7, task_id: str | None = None) -> None:
     else:
         print("  Odoo offline — financial section will be skipped.")
 
-    briefing_md = render_briefing(since, vault_data, fin)
+    print("Loading Business Goals for variance analysis…")
+    goals = parse_business_goals()
+    if goals.get("available"):
+        print(f"  Business Goals loaded. Revenue target: ${goals['monthly_revenue_target']:,.0f}/month")
+    else:
+        print("  Business_Goals.md not found — using default targets.")
+
+    briefing_md = render_briefing(since, vault_data, fin, goals)
 
     if DRY_RUN:
         print("\n[DRY RUN] Briefing content:\n")

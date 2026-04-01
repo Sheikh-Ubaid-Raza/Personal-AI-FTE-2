@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "odoo-cloud": {
+      "command": "node",
+      "args": [
+        "/home/ubuntu/ai_employee_vault/.claude/mcp-servers/odoo-mcp/server.js"
+      ],
+      "cwd": "/home/ubuntu/ai_employee_vault",
+      "env": {
+        "ODOO_URL": "https://your-domain.com",
+        "ODOO_DB": "postgres",
+        "ODOO_USER": "odoo",
+        "ODOO_PASSWORD": "${ODOO_DB_PASSWORD}",
+        "AGENT_TYPE": "cloud",
+        "DRAFT_ONLY": "true"
+      },
+      "disabled": false,
+      "alwaysAllow": [],
+      "name": "odoo-cloud",
+      "timeout": 60
+    }
+  }
+}

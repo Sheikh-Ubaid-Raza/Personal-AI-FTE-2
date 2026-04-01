@@ -1,0 +1,160 @@
+2026-03-29 16:54:42: Traceback (most recent call last):
+2026-03-29 16:54:42:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:54:42:     main()
+2026-03-29 16:54:42:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:54:42:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:54:42:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:54:42:     os.mkdir(self, mode)
+2026-03-29 16:54:42: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 16:54:48: Traceback (most recent call last):
+2026-03-29 16:54:48:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:54:48:     main()
+2026-03-29 16:54:48:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:54:48:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:54:48:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:54:48:     os.mkdir(self, mode)
+2026-03-29 16:54:48: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 16:54:52: Traceback (most recent call last):
+2026-03-29 16:54:52:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:54:52:     main()
+2026-03-29 16:54:52:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:54:52:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:54:52:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:54:52:     os.mkdir(self, mode)
+2026-03-29 16:54:52: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 16:54:58: Traceback (most recent call last):
+2026-03-29 16:54:58:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:54:58:     main()
+2026-03-29 16:54:58:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:54:58:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:54:58:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:54:58:     os.mkdir(self, mode)
+2026-03-29 16:54:58: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 16:55:03: Traceback (most recent call last):
+2026-03-29 16:55:03:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:55:03:     main()
+2026-03-29 16:55:03:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:55:03:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:55:03:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:55:03:     os.mkdir(self, mode)
+2026-03-29 16:55:03: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 16:55:08: Traceback (most recent call last):
+2026-03-29 16:55:08:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:55:08:     main()
+2026-03-29 16:55:08:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:55:08:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:55:08:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:55:08:     os.mkdir(self, mode)
+2026-03-29 16:55:08: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 16:55:14: Traceback (most recent call last):
+2026-03-29 16:55:14:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:55:14:     main()
+2026-03-29 16:55:14:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:55:14:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:55:14:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:55:14:     os.mkdir(self, mode)
+2026-03-29 16:55:14: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 16:55:19: Traceback (most recent call last):
+2026-03-29 16:55:19:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:55:19:     main()
+2026-03-29 16:55:19:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:55:19:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:55:19:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:55:19:     os.mkdir(self, mode)
+2026-03-29 16:55:19: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 16:55:24: Traceback (most recent call last):
+2026-03-29 16:55:24:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:55:24:     main()
+2026-03-29 16:55:24:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:55:24:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:55:24:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:55:24:     os.mkdir(self, mode)
+2026-03-29 16:55:24: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 16:55:29: Traceback (most recent call last):
+2026-03-29 16:55:29:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 16:55:29:     main()
+2026-03-29 16:55:29:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 16:55:29:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 16:55:29:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 16:55:29:     os.mkdir(self, mode)
+2026-03-29 16:55:29: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:23:45: Traceback (most recent call last):
+2026-03-29 17:23:45:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:23:45:     main()
+2026-03-29 17:23:45:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:23:45:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:23:45:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:23:45:     os.mkdir(self, mode)
+2026-03-29 17:23:45: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:23:51: Traceback (most recent call last):
+2026-03-29 17:23:51:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:23:51:     main()
+2026-03-29 17:23:51:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:23:51:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:23:51:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:23:51:     os.mkdir(self, mode)
+2026-03-29 17:23:51: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:23:57: Traceback (most recent call last):
+2026-03-29 17:23:57:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:23:57:     main()
+2026-03-29 17:23:57:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:23:57:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:23:57:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:23:57:     os.mkdir(self, mode)
+2026-03-29 17:23:57: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:24:01: Traceback (most recent call last):
+2026-03-29 17:24:01:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:24:01:     main()
+2026-03-29 17:24:01:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:24:01:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:24:01:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:24:01:     os.mkdir(self, mode)
+2026-03-29 17:24:01: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:24:07: Traceback (most recent call last):
+2026-03-29 17:24:07:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:24:07:     main()
+2026-03-29 17:24:07:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:24:07:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:24:07:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:24:07:     os.mkdir(self, mode)
+2026-03-29 17:24:07: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:24:12: Traceback (most recent call last):
+2026-03-29 17:24:12:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:24:12:     main()
+2026-03-29 17:24:12:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:24:12:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:24:12:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:24:12:     os.mkdir(self, mode)
+2026-03-29 17:24:12: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:24:18: Traceback (most recent call last):
+2026-03-29 17:24:18:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:24:18:     main()
+2026-03-29 17:24:18:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:24:18:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:24:18:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:24:18:     os.mkdir(self, mode)
+2026-03-29 17:24:18: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:24:23: Traceback (most recent call last):
+2026-03-29 17:24:23:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:24:23:     main()
+2026-03-29 17:24:23:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:24:23:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:24:23:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:24:23:     os.mkdir(self, mode)
+2026-03-29 17:24:23: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:24:29: Traceback (most recent call last):
+2026-03-29 17:24:29:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:24:29:     main()
+2026-03-29 17:24:29:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:24:29:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:24:29:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:24:29:     os.mkdir(self, mode)
+2026-03-29 17:24:29: PermissionError: [Errno 13] Permission denied: '/Inbox'
+2026-03-29 17:24:33: Traceback (most recent call last):
+2026-03-29 17:24:33:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 454, in <module>
+2026-03-29 17:24:33:     main()
+2026-03-29 17:24:33:   File "/mnt/c/h-0/ai_employee_vault_bronze/whatsapp_watcher.py", line 388, in main
+2026-03-29 17:24:33:     d.mkdir(parents=True, exist_ok=True)
+2026-03-29 17:24:33:   File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+2026-03-29 17:24:33:     os.mkdir(self, mode)
+2026-03-29 17:24:33: : [Errno 13] Permission denied: '/Inbox'

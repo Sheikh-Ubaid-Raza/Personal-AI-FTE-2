@@ -494,29 +494,68 @@ def post_to_instagram(content: str, image_path: str) -> tuple[bool, str, str]:
 
             page.wait_for_timeout(3000)
 
-            # ── 5. Navigate wizard: Crop → Next ──────────────────────
-            print("  [5] Navigating crop/filter steps...")
-            for step in range(3):   # Up to 3 "Next" clicks to reach caption screen
-                # Use force=True to bypass dialog overlay interception
+            # ── 5. Navigate wizard: Crop → Next → Next (2x) → Caption ──────────────────────
+            print("  [5] Navigating crop/filter steps (2x Next clicks)...")
+            
+            # Instagram flow: After upload, click Next TWICE to reach caption screen
+            # First Next: After crop/edit
+            # Second Next: After filters
+            # Then we see caption + Share button
+            for next_click in range(2):
                 clicked_next = False
+                print(f"      Click {next_click + 1}/2: Looking for Next button...")
+                
+                # Try multiple selectors for Next button (top right corner of dialog)
                 for sel in [
+                    'div[role="dialog"] button:has-text("Next")',
+                    'div[role="dialog"] [role="button"]:has-text("Next")',
                     'button:has-text("Next")',
                     '[role="button"]:has-text("Next")',
                 ]:
                     try:
-                        el = page.locator(sel).first
-                        el.wait_for(state="attached", timeout=8000)
-                        btn_text = el.inner_text(timeout=2000).strip()
-                        el.click(force=True, timeout=5000)
-                        clicked_next = True
-                        page.wait_for_timeout(1500)
-                        break
-                    except Exception:
+                        el = page.locator(sel).last  # last = dialog button, not feed items
+                        el.wait_for(state="visible", timeout=10000)
+                        
+                        # Get element info for debugging
+                        try:
+                            btn_box = el.bounding_box(timeout=2000)
+                            if btn_box:
+                                print(f"      Found Next at ({btn_box['x']:.0f}, {btn_box['y']:.0f})")
+                        except Exception:
+                            pass
+                        
+                        # Use mouse.click for trusted event (Instagram requires this)
+                        btn_box = el.bounding_box(timeout=5000)
+                        if btn_box:
+                            page.mouse.click(
+                                btn_box['x'] + btn_box['width'] / 2,
+                                btn_box['y'] + btn_box['height'] / 2
+                            )
+                            clicked_next = True
+                            print(f"      Clicked Next (mouse.click)")
+                            page.wait_for_timeout(2000)
+                            break
+                        else:
+                            # Fallback to regular click
+                            el.click(force=True, timeout=5000)
+                            clicked_next = True
+                            print(f"      Clicked Next (force=True)")
+                            page.wait_for_timeout(2000)
+                            break
+                    except Exception as e:
+                        print(f"      Next attempt failed: {e}")
                         pass
 
                 if not clicked_next:
-                    # No more Next buttons — check for Share
+                    print(f"      No Next button found on click {next_click + 1} — may already be at caption screen")
+                    # Take screenshot for debugging
+                    dbg_path = str(LOGS / f"ig_after_next{next_click + 1}_{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S')}.png")
+                    page.screenshot(path=dbg_path)
+                    print(f"      Debug screenshot → {dbg_path}")
                     break
+                
+                # Wait for transition between clicks
+                page.wait_for_timeout(2000)
 
             # ── 6. Type caption ───────────────────────────────────────
             print(f"  [6] Typing caption ({len(content)} chars)...")
@@ -536,10 +575,12 @@ def post_to_instagram(content: str, image_path: str) -> tuple[bool, str, str]:
                 page.wait_for_timeout(1500)
 
             # ── 7. Click Share ────────────────────────────────────────
-            print("  [7] Clicking Share...")
+            print("  [7] Clicking Share (top right corner)...")
             shared = False
 
-            # Strategy A: regular Playwright click scoped to the dialog (trusted event)
+            # Instagram requires trusted mouse events for Share button
+            # Strategy: Find Share button in dialog, use mouse.click at its center
+            
             for sel in [
                 'div[role="dialog"] button:has-text("Share")',
                 'div[role="dialog"] [role="button"]:has-text("Share")',
@@ -549,34 +590,26 @@ def post_to_instagram(content: str, image_path: str) -> tuple[bool, str, str]:
                 try:
                     el = page.locator(sel).last  # last = header Share, not feed items
                     el.wait_for(state="visible", timeout=8000)
-                    el.click(timeout=8000)
-                    shared = True
-                    print(f"  [7] Clicked Share via '{sel}'")
-                    break
-                except Exception:
+                    
+                    # Get bounding box for mouse click
+                    btn_box = el.bounding_box(timeout=5000)
+                    if btn_box:
+                        page.mouse.click(
+                            btn_box['x'] + btn_box['width'] / 2,
+                            btn_box['y'] + btn_box['height'] / 2
+                        )
+                        shared = True
+                        print(f"  [7] Clicked Share via mouse.click at ({btn_box['x']:.0f}, {btn_box['y']:.0f})")
+                        break
+                    else:
+                        # Fallback to regular click
+                        el.click(timeout=8000)
+                        shared = True
+                        print(f"  [7] Clicked Share via regular click")
+                        break
+                except Exception as e:
+                    print(f"  [7] Share attempt failed: {e}")
                     pass
-
-            # Strategy B: get Share button coordinates → mouse.click (trusted event)
-            # JS btn.click() is NOT trusted — Instagram ignores it; mouse.click() IS trusted
-            if not shared:
-                print("  [7] Trying mouse.click at Share button coordinates...")
-                coords = page.evaluate("""
-                    () => {
-                        const dialog = document.querySelector('div[role="dialog"]');
-                        const scope = dialog || document;
-                        for (const el of scope.querySelectorAll('[role="button"], button')) {
-                            if (el.textContent.trim() === 'Share') {
-                                const r = el.getBoundingClientRect();
-                                return {x: r.x + r.width / 2, y: r.y + r.height / 2};
-                            }
-                        }
-                        return null;
-                    }
-                """)
-                if coords:
-                    page.mouse.click(coords['x'], coords['y'])
-                    shared = True
-                    print(f"  [7] mouse.click at ({coords['x']:.0f}, {coords['y']:.0f})")
 
             if not shared:
                 page.screenshot(path=screenshot_path)

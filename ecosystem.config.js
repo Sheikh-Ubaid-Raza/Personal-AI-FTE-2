@@ -52,6 +52,28 @@ module.exports = {
       },
     },
 
+    // ── WhatsApp Watcher (Ears — monitors WhatsApp Web) ───────────────
+    {
+      name: "whatsapp-watcher",
+      script: "whatsapp_watcher.py",
+      interpreter: "/usr/bin/python3",
+      cwd: __dirname,
+
+      autorestart: true,
+      max_restarts: 10,
+      min_uptime: "10s",
+      restart_delay: 5000, // 5s — be gentle with WhatsApp Web
+
+      log_date_format: "YYYY-MM-DD HH:mm:ss",
+      error_file: "Logs/pm2-whatsapp-watcher-error.log",
+      out_file: "Logs/pm2-whatsapp-watcher-out.log",
+      merge_logs: true,
+
+      env: {
+        PYTHONUNBUFFERED: "1",
+      },
+    },
+
     // ── Orchestrator (Brain — triage, plans, HITL, skills) ───────────
     {
       name: "orchestrator",

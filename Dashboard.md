@@ -1,6 +1,6 @@
 ---
 title: AI Employee Dashboard
-last_updated: 2026-03-08T04:59:50+00:00
+last_updated: 2026-03-30T15:22:29+00:00
 version: 0.2.1
 ---
 
@@ -10,10 +10,10 @@ version: 0.2.1
 
 | Component     | Status  | Last Check           |
 | ------------- | ------- | -------------------- |
-| Orchestrator  | Online  | 2026-03-08T04:59:50+00:00 |
+| Orchestrator  | Online  | 2026-03-30T15:22:29+00:00 |
 | Gmail Watcher | Offline | —                    |
-| File Watcher  | Online  | 2026-03-08T04:59:50+00:00 |
-| Claude Code   | Online  | 2026-03-08T04:59:50+00:00 |
+| File Watcher  | Online  | 2026-03-30T15:22:29+00:00 |
+| Claude Code   | Online  | 2026-03-30T15:22:29+00:00 |
 
 ## Service Health
 
@@ -23,8 +23,8 @@ version: 0.2.1
 | Gmail        | ⚪ Unknown            | —                    | — |
 | LinkedIn     | ⚪ Unknown            | —                    | — |
 | Facebook     | ⚪ Unknown            | —                    | — |
-| Instagram    | 🟢 Online             | 2026-03-08T01:53:56+ | — |
-| Twitter      | 🟢 Online             | 2026-03-08T02:01:39+ | — |
+| Instagram    | 🟢 Online             | 2026-03-30T14:55:08+ | — |
+| Twitter      | ⚪ Unknown            | —                    | — |
 
 
 ## Active Tasks
@@ -38,7 +38,26 @@ version: 0.2.1
 | # | Task | Priority | Status | Reason | Escalated |
 | --- | ---- | -------- | ------ | ------ | --------- |
 | 1 | Objective                                          | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-07T13:49:11. |
-| 2 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-08T02:44:11. |
+| 2 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:35. |
+| 3 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:35. |
+| 4 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:35. |
+| 5 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:35. |
+| 6 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:35. |
+| 7 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:35. |
+| 8 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:35. |
+| 9 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:35. |
+| 10 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:41. |
+| 11 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:41. |
+| 12 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:41. |
+| 13 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:41. |
+| 14 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:22:41. |
+| 15 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T13:22:25. |
+| 16 | Gold Tier E2E Test — Facebook Post                 | low      | Checkbox Pending | Contains approval-boundary keywords — human sign-o | 2026-03-29T12:25:37. |
+| 17 | Gold Tier E2E Test — Instagram Post                | low      | Checkbox Pending | Contains approval-boundary keywords — human sign-o | 2026-03-29T12:25:54. |
+| 18 | Gold Tier E2E Test — LinkedIn Post                 | low      | Checkbox Pending | Contains approval-boundary keywords — human sign-o | 2026-03-29T12:25:11. |
+| 19 | Objective                                          | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-29T12:26:20. |
+| 20 | Gold Tier E2E Test — Twitter/X Post                | low      | Checkbox Pending | Contains approval-boundary keywords — human sign-o | 2026-03-29T12:25:22. |
+| 21 | Task Summary                                       | medium   | Checkbox Pending | Task involves actions requiring human approval per | 2026-03-08T02:44:11. |
 
 > **Action Required:** Review items above. Tick the checkbox in the Plan file to approve.
 
@@ -46,6 +65,53 @@ version: 0.2.1
 
 | Timestamp            | Action                                                     | Result  |
 | -------------------- | ---------------------------------------------------------- | ------- |
+| 2026-03-30T14:55:08+00:00 | Instagram post (91 chars) — FINAL_LIVE_INSTAGRAM.md | Success |
+| 2026-03-30T14:51:53+00:00 | Triaged FINAL_LIVE_INSTAGRAM.md → Awaiting_approval              | Success |
+| 2026-03-30T14:51:53+00:00 | Triaged FINAL_LIVE_WHATSAPP.md → Awaiting_approval              | Success |
+| 2026-03-30T14:38:46+00:00 | Instagram post (118 chars) — LIVE_INSTAGRAM_TEST.md | Success |
+| 2026-03-30T14:31:51+00:00 | Triaged LIVE_INSTAGRAM_TEST.md → Awaiting_approval              | Success |
+| 2026-03-30T14:31:51+00:00 | Triaged LIVE_WHATSAPP_TEST.md → Awaiting_approval              | Success |
+| 2026-03-30T13:38:01+00:00 | Odoo: Draft invoice False for Heagent Nursing Services ($5,000.00) — ODOO_FINAL_TEST.md | Success |
+| 2026-03-30T13:35:40+00:00 | Triaged ODOO_FINAL_TEST.md → Awaiting_approval              | Success |
+| 2026-03-30T13:33:23+00:00 | Instagram post (148 chars) — FINAL_INSTAGRAM_TEST.md | Success |
+| 2026-03-30T13:30:31+00:00 | Triaged FINAL_INSTAGRAM_TEST.md → Awaiting_approval              | Success |
+| 2026-03-30T13:30:31+00:00 | Triaged FINAL_ODOO_TEST.md → Awaiting_approval              | Success |
+| 2026-03-30T13:30:31+00:00 | Triaged FINAL_WHATSAPP_TEST.md → Awaiting_approval              | Success |
+| 2026-03-29T13:53:53+00:00 | Triaged WHATSAPP_E2E_FINAL.md → Awaiting_approval              | Success |
+| 2026-03-29T13:49:57+00:00 | Triaged WHATSAPP_REPLY_TEST.md → Awaiting_approval              | Success |
+| 2026-03-29T13:26:41+00:00 | Instagram post (121 chars) — INSTAGRAM_FIX_TEST.md | Success |
+| 2026-03-29T13:23:22+00:00 | Triaged INSTAGRAM_FIX_TEST.md → Awaiting_approval              | Success |
+| 2026-03-29T13:22:25+00:00 | Triaged TASK_20260329T132221_933.md → Awaiting_approval              | Success |
+| 2026-03-29T13:02:04+00:00 | Instagram post (122 chars) — E2E_INSTAGRAM_TEST.md | Failed |
+| 2026-03-29T13:00:12+00:00 | Facebook post (179 chars) — E2E_FACEBOOK_TEST.md | Success |
+| 2026-03-29T12:56:51+00:00 | Triaged E2E_FACEBOOK_TEST.md → Awaiting_approval              | Success |
+| 2026-03-29T12:56:51+00:00 | Triaged E2E_GMAIL_TEST.md → Awaiting_approval              | Success |
+| 2026-03-29T12:56:51+00:00 | Triaged E2E_INSTAGRAM_TEST.md → Awaiting_approval              | Success |
+| 2026-03-29T12:32:28+00:00 | Twitter/X post (103 chars) — E2E_TWITTER_TEST.md | Success |
+| 2026-03-29T12:27:57+00:00 | Triaged E2E_CEO_BRIEFING_TEST.md → Awaiting_approval              | Success |
+| 2026-03-29T12:27:57+00:00 | Triaged E2E_LINKEDIN_TEST.md → Awaiting_approval              | Success |
+| 2026-03-29T12:27:57+00:00 | Triaged E2E_TWITTER_TEST.md → Awaiting_approval              | Success |
+| 2026-03-29T12:27:57+00:00 | CEO Briefing: Briefing generated for 2026-03-29 (2 tasks, $0.00 revenue) | Success |
+| 2026-03-29T12:26:52+00:00 | Triaged TASK_20260329T173000_ceo_briefing_e2e.md → Awaiting_approval              | Success |
+| 2026-03-29T12:26:52+00:00 | CEO Briefing: Briefing generated for 2026-03-29 (0 tasks, $0.00 revenue) | Success |
+| 2026-03-29T12:26:21+00:00 | Triaged TASK_20260329T173000_odoo_e2e.md → Awaiting_approval              | Success |
+| 2026-03-29T12:25:54+00:00 | Triaged TASK_20260329T173000_instagram_e2e.md → Awaiting_approval              | Success |
+| 2026-03-29T12:25:37+00:00 | Triaged TASK_20260329T173000_facebook_e2e.md → Awaiting_approval              | Success |
+| 2026-03-29T12:25:22+00:00 | Triaged TASK_20260329T173000_twitter_e2e.md → Awaiting_approval              | Success |
+| 2026-03-29T12:25:11+00:00 | Triaged TASK_20260329T173000_linkedin_e2e.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:41+00:00 | Triaged TASK_20260329T122235_634.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:41+00:00 | Triaged TASK_20260329T122236_182.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:41+00:00 | Triaged TASK_20260329T122236_725.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:41+00:00 | Triaged TASK_20260329T122237_266.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:41+00:00 | Triaged TASK_20260329T122237_784.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:36+00:00 | Triaged TASK_20260329T122231_372.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:36+00:00 | Triaged TASK_20260329T122231_900.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:36+00:00 | Triaged TASK_20260329T122232_428.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:36+00:00 | Triaged TASK_20260329T122232_965.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:36+00:00 | Triaged TASK_20260329T122233_499.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:36+00:00 | Triaged TASK_20260329T122234_046.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:36+00:00 | Triaged TASK_20260329T122234_581.md → Awaiting_approval              | Success |
+| 2026-03-29T12:22:36+00:00 | Triaged TASK_20260329T122235_108.md → Awaiting_approval              | Success |
 | 2026-03-08T02:44:43.217637+00:00 | Triaged TASK_test_triage_20260308.md → urgent (priority: high) | Success |
 | 2026-03-08T02:44:11+00:00 | Triaged TASK_test_triage_20260308.md → Awaiting_approval              | Success |
 | 2026-03-08T02:01:39+00:00 | Twitter/X post (116 chars) — TASK_20260308T020000_twitter.md | Success |

@@ -3,7 +3,7 @@
     "gmail": {
       "command": "python3",
       "args": ["mcp_gmail.py"],
-      "cwd": "/mnt/c/h-0/gold_tier"
+      "cwd": "/mnt/c/h-0/AI_Employee_Vault_bronze"
     }
   },
   "hooks": {

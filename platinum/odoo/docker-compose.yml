@@ -1,0 +1,157 @@
+version: '3.8'
+
+#===============================================================================
+# PLATINUM PHASE 1B: Odoo Community Docker Compose
+# Purpose: Deploy Odoo Community ERP with HTTPS, backups, and monitoring
+# Target: Oracle Cloud Free Tier VM (Ubuntu 24.04 LTS)
+#===============================================================================
+
+services:
+  #-------------------------------------------------------------------------------
+  # PostgreSQL Database
+  #-------------------------------------------------------------------------------
+  db:
+    image: postgres:16
+    container_name: odoo_postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=${ODOO_DB_PASSWORD:-ChangeMe123!}
+      - POSTGRES_DB=postgres
+    volumes:
+      - odoo_postgres_data:/var/lib/postgresql/data
+      - odoo_backups:/backups
+    networks:
+      - odoo_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo -d postgres"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+  #-------------------------------------------------------------------------------
+  # Odoo Community (Latest Stable)
+  #-------------------------------------------------------------------------------
+  odoo:
+    image: odoo:18.0
+    container_name: odoo_community
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - HOST=db
+      - PORT=5432
+      - USER=odoo
+      - PASSWORD=${ODOO_DB_PASSWORD:-ChangeMe123!}
+      - ODOO_DATABASE=postgres
+      - ADMIN_PASSWORD=${ODOO_ADMIN_PASSWORD:-AdminChangeMe123!}
+    volumes:
+      - odoo_web_data:/var/lib/odoo
+      - ./odoo/custom_addons:/mnt/extra-addons
+      - odoo_logs:/var/log/odoo
+    ports:
+      - "8069:8069"  # Exposed for nginx proxy only (firewall blocks external access)
+    networks:
+      - odoo_network
+    command: --workers=4 --max-cron-threads=1 --limit-time-cpu=60 --limit-time-real=120
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8069/web/health"]
+      interval: 60s
+      timeout: 30s
+      retries: 3
+      start_period: 120s
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  #-------------------------------------------------------------------------------
+  # nginx Reverse Proxy
+  #-------------------------------------------------------------------------------
+  nginx:
+    image: nginx:alpine
+    container_name: odoo_nginx
+    restart: unless-stopped
+    depends_on:
+      - odoo
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./odoo/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./odoo/ssl:/etc/nginx/ssl:ro
+      - certbot_www:/var/www/certbot:ro
+      - certbot_conf:/etc/letsencrypt:ro
+    networks:
+      - odoo_network
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  #-------------------------------------------------------------------------------
+  # Certbot (Let's Encrypt SSL)
+  #-------------------------------------------------------------------------------
+  certbot:
+    image: certbot/certbot
+    container_name: odoo_certbot
+    restart: unless-stopped
+    volumes:
+      - certbot_www:/var/www/certbot:rw
+      - certbot_conf:/etc/letsencrypt:rw
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    networks:
+      - odoo_network
+
+  #-------------------------------------------------------------------------------
+  # Backup Service (Daily Database + Filestore Backups)
+  #-------------------------------------------------------------------------------
+  backup:
+    image: postgres:16
+    container_name: odoo_backup
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      - PGPASSWORD=${ODOO_DB_PASSWORD:-ChangeMe123!}
+      - BACKUP_RETENTION_DAYS=${BACKUP_RETENTION_DAYS:-7}
+    volumes:
+      - odoo_backups:/backups
+      - odoo_web_data:/var/lib/odoo:ro
+      - ./odoo/backup_script.sh:/backup_script.sh:ro
+    networks:
+      - odoo_network
+    # Run backup daily at 2 AM
+    command: >
+      sh -c 'while true; do
+        if [ "$$(date +%H)" = "02" ]; then
+          /backup_script.sh;
+          sleep 3600;
+        else
+          sleep 300;
+        fi;
+      done'
+
+networks:
+  odoo_network:
+    driver: bridge
+
+volumes:
+  odoo_postgres_data:
+    driver: local
+  odoo_web_data:
+    driver: local
+  odoo_logs:
+    driver: local
+  odoo_backups:
+    driver: local
+  certbot_www:
+    driver: local
+  certbot_conf:
+    driver: local

@@ -739,6 +739,7 @@ def detect_skill(text: str) -> str | None:
     valid_skills = {
         "gmail-send", "linkedin-post", "facebook-post",
         "instagram-post", "twitter-post", "accounting", "ceo-briefing",
+        "whatsapp-reply", "whatsapp-watcher",
     }
     skill_field = fm.get("skill", "").lower()
     if skill_field in valid_skills:
@@ -780,6 +781,7 @@ def run_skill(skill_name: str, task_id: str) -> tuple[bool, str]:
         "twitter-post":   TWITTER_POST_SCRIPT,
         "accounting":     ACCOUNTING_SCRIPT,      # Fix: was missing
         "ceo-briefing":   CEO_BRIEFING_SCRIPT,    # Gold Tier addition
+        "whatsapp-reply": VAULT / ".claude/skills/whatsapp-reply/scripts/whatsapp_reply.py",
     }
     script = scripts.get(skill_name)
     if not script:

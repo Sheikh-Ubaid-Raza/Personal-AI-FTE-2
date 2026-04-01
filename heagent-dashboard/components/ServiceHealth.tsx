@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import {
   Mail, Database, Linkedin, Facebook, Instagram, Twitter,
-  Server, Eye, RefreshCw,
+  Server, Eye, RefreshCw, MessageSquare, FileText,
 } from "lucide-react";
 import clsx from "clsx";
 
@@ -23,7 +23,8 @@ interface HealthData {
 const ICONS: Record<string, React.ElementType> = {
   orchestrator: Server,
   "gmail-watcher": Mail,
-  watcher: Eye,
+  watcher: FileText,
+  "whatsapp-watcher": MessageSquare,
   odoo: Database,
   linkedin: Linkedin,
   facebook: Facebook,
@@ -101,8 +102,8 @@ export function ServiceHealth() {
       </div>
 
       {/* Service Grid */}
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {(data?.services ?? Array.from({ length: 8 }, (_, i) => ({
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        {(data?.services ?? Array.from({ length: 9 }, (_, i) => ({
           id: String(i), label: "—", status: "unknown" as const, detail: "…",
         }))).map((svc) => {
           const Icon = ICONS[svc.id] ?? Server;

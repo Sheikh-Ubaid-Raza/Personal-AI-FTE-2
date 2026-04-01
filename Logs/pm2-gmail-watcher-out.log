@@ -4,3 +4,86 @@
 2026-03-08 06:51:06: 
 2026-03-08 06:51:06: Authenticating with Gmail API…
 2026-03-08 06:51:07: Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=99717247100-fefq3c1kii2ftr2bbfpfo34u9khk0osg.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A47383%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&state=7EwtR9okyjmJ2mBtMGjwYJcw81d9SS&access_type=offline
+2026-03-29 16:54:50: 
+2026-03-29 16:54:50: Authenticating with Gmail API…
+2026-03-29 16:54:52: Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=99717247100-fefq3c1kii2ftr2bbfpfo34u9khk0osg.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A43055%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&state=y4BobWtz9t8NiQuyOMfw3d6q7eD2Bp&access_type=offline
+2026-03-29 17:23:47: 
+2026-03-29 17:23:47: Authenticating with Gmail API…
+2026-03-29 17:23:47: ✓ Authenticated successfully
+2026-03-29 17:23:47: 
+2026-03-29 17:23:47: ╭───────────────────────────────────────────────────────────╮
+2026-03-29 17:23:47: │                                                           │
+2026-03-29 17:23:47: │  AI EMPLOYEE — GMAIL WATCHER                              │
+2026-03-29 17:23:47: │  External Perception Layer v0.1  •  OAuth2  •  Read-Only  │
+2026-03-29 17:23:47: │                                                           │
+2026-03-29 17:23:47: │  Output:   /mnt/c/h-0/ai_employee_vault_bronze/Inbox      │
+2026-03-29 17:23:47: │  Logs:     /mnt/c/h-0/ai_employee_vault_bronze/Logs       │
+2026-03-29 17:23:47: │  Query:    is:unread is:important                         │
+2026-03-29 17:23:47: │  Interval: 120s                                           │
+2026-03-29 17:23:47: │  Known:    13 already processed                           │
+2026-03-29 17:23:47: │                                                           │
+2026-03-29 17:23:47: ╰───────────────────────────────────────────────────────────╯
+2026-03-29 17:23:47: 
+2026-03-30 18:30:35: 
+2026-03-30 18:30:35: Authenticating with Gmail API…
+2026-03-30 18:30:37: ✓ Authenticated successfully
+2026-03-30 18:30:37: 
+2026-03-30 18:30:37: ╭───────────────────────────────────────────────────────────╮
+2026-03-30 18:30:37: │                                                           │
+2026-03-30 18:30:37: │  AI EMPLOYEE — GMAIL WATCHER                              │
+2026-03-30 18:30:37: │  External Perception Layer v0.1  •  OAuth2  •  Read-Only  │
+2026-03-30 18:30:37: │                                                           │
+2026-03-30 18:30:37: │  Output:   /mnt/c/h-0/ai_employee_vault_bronze/Inbox      │
+2026-03-30 18:30:37: │  Logs:     /mnt/c/h-0/ai_employee_vault_bronze/Logs       │
+2026-03-30 18:30:37: │  Query:    is:unread is:important                         │
+2026-03-30 18:30:37: │  Interval: 120s                                           │
+2026-03-30 18:30:37: │  Known:    13 already processed                           │
+2026-03-30 18:30:37: │                                                           │
+2026-03-30 18:30:37: ╰───────────────────────────────────────────────────────────╯
+2026-03-30 18:30:37: 
+2026-03-30 19:30:58: ╭──────────────────────────────────────────────────────────────────────────────╮
+2026-03-30 19:30:58: │                                                                              │
+2026-03-30 19:30:58: │    AI EMPLOYEE — GMAIL WATCHER                                               │
+2026-03-30 19:30:58: │                                                                              │
+2026-03-30 19:30:58: ╰──────────────────────────────────────────────────────────────────────────────╯
+2026-03-30 19:30:58: ╭──────────────────────────────────────╮╭──────────────────────────────────────╮
+2026-03-30 19:30:58: │         Gmail Watcher Status         ││            Recent Emails             │
+2026-03-30 19:30:58: │ ┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓ ││ ┏━━━━━━┳━━━━━━━━━━━━━┳━━━━━━┳━━━━━━┓ │
+2026-03-30 19:30:58: │ ┃ Metric             ┃ Value       ┃ ││ ┃ #    ┃ Subject     ┃ From ┃ Time ┃ │
+2026-03-30 19:30:58: │ ┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩ ││ ┡━━━━━━╇━━━━━━━━━━━━━╇━━━━━━╇━━━━━━┩ │
+2026-03-30 19:30:58: │ │ Status             │ ● ONLINE    │ ││ │ —    │ Waiting for │ —    │ —    │ │
+2026-03-30 19:30:58: │ ├────────────────────┼─────────────┤ ││ │      │ emails…     │      │      │ │
+2026-03-30 19:30:58: │ │ Uptime             │ 01h 00m 22s │ ││ └──────┴─────────────┴──────┴──────┘ │
+2026-03-30 19:30:58: │ ├────────────────────┼─────────────┤ ││                                      │
+2026-03-30 19:30:58: │ │ Poll Interval      │ 120s        │ ││                                      │
+2026-03-30 19:30:58: │ ├────────────────────┼─────────────┤ ││                                      │
+2026-03-30 19:30:58: │ │ Gmail Inbox Files  │ 13          │ ││                                      │
+2026-03-30 19:30:58: │ ├────────────────────┼─────────────┤ ││                                      │
+2026-03-30 19:30:58: │ │ Emails Captured    │ 0           │ ││                                      │
+2026-03-30 19:30:58: │ ├────────────────────┼─────────────┤ ││                                      │
+2026-03-30 19:30:58: │ │ Errors             │ 0           │ ││                                      │
+2026-03-30 19:30:58: ╰──────────────────────────────────────╯╰──────────────────────────────────────╯
+2026-03-30 19:30:58: ╭──────────────────────────────────────────────────────────────────────────────╮
+2026-03-30 19:30:58: │ Press Ctrl+C to stop  •  Polling every 120s  •  Query: is:unread             │
+2026-03-30 19:30:58: 
+2026-03-30 19:30:58: ╭────────────────────────────────╮
+2026-03-30 19:30:58: │ Gmail Watcher stopped.         │
+2026-03-30 19:30:58: │ Captured 0 emails  •  0 errors │
+2026-03-30 19:30:58: ╰────────────────────────────────╯
+2026-03-30 19:31:01: 
+2026-03-30 19:31:01: Authenticating with Gmail API…
+2026-03-30 19:31:01: ✓ Authenticated successfully
+2026-03-30 19:31:01: 
+2026-03-30 19:31:01: ╭───────────────────────────────────────────────────────────╮
+2026-03-30 19:31:01: │                                                           │
+2026-03-30 19:31:01: │  AI EMPLOYEE — GMAIL WATCHER                              │
+2026-03-30 19:31:01: │  External Perception Layer v0.1  •  OAuth2  •  Read-Only  │
+2026-03-30 19:31:01: │                                                           │
+2026-03-30 19:31:01: │  Output:   /mnt/c/h-0/ai_employee_vault_bronze/Inbox      │
+2026-03-30 19:31:01: │  Logs:     /mnt/c/h-0/ai_employee_vault_bronze/Logs       │
+2026-03-30 19:31:01: │  Query:    is:unread is:important                         │
+2026-03-30 19:31:01: │  Interval: 120s                                           │
+2026-03-30 19:31:01: │  Known:    13 already processed                           │
+2026-03-30 19:31:01: │                                                           │
+2026-03-30 19:31:01: ╰───────────────────────────────────────────────────────────╯
+2026-03-30 19:31:01: 

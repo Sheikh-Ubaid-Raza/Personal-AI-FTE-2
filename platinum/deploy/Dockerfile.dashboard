@@ -1,0 +1,62 @@
+# PLATINUM PHASE 1C: Heagent Dashboard Dockerfile
+# Purpose: Production build of Next.js Dashboard
+# Target: Oracle Cloud Free Tier VM
+
+FROM node:20-alpine AS base
+
+# Install dependencies only when needed
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
+
+WORKDIR /app
+
+# Copy package files
+COPY package.json package-lock.json* ./
+RUN npm ci
+
+# Rebuild the source code only when needed
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+# Set environment variables for build
+ARG ODOO_URL
+ARG ODOO_DB
+ARG ODOO_USER
+ARG ODOO_PASSWORD
+
+ENV ODOO_URL=$ODOO_URL
+ENV ODOO_DB=$ODOO_DB
+ENV ODOO_USER=$ODOO_USER
+ENV ODOO_PASSWORD=$ODOO_PASSWORD
+ENV VAULT_PATH=/vault
+
+# Build Next.js application
+RUN npm run build
+
+# Production image, copy all the files and run next
+FROM base AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copy built application
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Set correct permissions
+RUN chown -R nextjs:nodejs /app
+
+USER nextjs
+
+EXPOSE 3000
+
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+CMD ["node", "server.js"]

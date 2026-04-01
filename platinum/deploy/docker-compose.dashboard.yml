@@ -1,0 +1,53 @@
+version: '3.8'
+
+#===============================================================================
+# PLATINUM PHASE 1C: Heagent Dashboard Docker Compose
+# Purpose: Deploy Next.js Dashboard with production build
+# Target: Oracle Cloud Free Tier VM
+#===============================================================================
+
+services:
+  #-------------------------------------------------------------------------------
+  # Heagent Dashboard (Next.js Production)
+  #-------------------------------------------------------------------------------
+  dashboard:
+    build:
+      context: ../../heagent-dashboard
+      dockerfile: ../../platinum/deploy/Dockerfile.dashboard
+      args:
+        - ODOO_URL=http://localhost:8069
+        - ODOO_DB=postgres
+        - ODOO_USER=odoo
+        - ODOO_PASSWORD=${ODOO_DB_PASSWORD}
+    container_name: heagent_dashboard
+    restart: unless-stopped
+    expose:
+      - "3000"
+    networks:
+      - odoo_network
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - VAULT_PATH=/vault
+      - ODOO_URL=http://localhost:8069
+      - ODOO_DB=postgres
+      - ODOO_USER=odoo
+      - ODOO_PASSWORD=${ODOO_DB_PASSWORD}
+      - PM2_AVAILABLE=false  # PM2 not available in container
+    volumes:
+      - ../../:/vault:ro  # Read-only vault access
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 60s
+      timeout: 30s
+      retries: 3
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+networks:
+  odoo_network:
+    external: true
+    name: odoo_odoo_network

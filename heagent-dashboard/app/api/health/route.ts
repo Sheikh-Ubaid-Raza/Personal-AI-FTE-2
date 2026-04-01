@@ -58,6 +58,12 @@ export async function GET() {
       detail:  "Monitoring Inbox/",
     },
     {
+      id:      "whatsapp-watcher",
+      label:   "WhatsApp Watcher",
+      status:  pm2["whatsapp-watcher"] ?? "unknown",
+      detail:  pm2["whatsapp-watcher"] === "online" ? "Polling every 60s" : "Stopped",
+    },
+    {
       id:      "odoo",
       label:   "Odoo ERP",
       status:  odooOnline ? "online" : "offline",

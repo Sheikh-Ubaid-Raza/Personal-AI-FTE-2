@@ -2,12 +2,14 @@
 .env
 credentials.json
 token.json
+.mcp.json
 
 # Browser session directories (contain auth cookies)
 .linkedin_session/
 .fb_session/
 .ig_session/
 .x_session/
+.wa_session/
 
 # Runtime state (ephemeral)
 Logs/ralph_state.json

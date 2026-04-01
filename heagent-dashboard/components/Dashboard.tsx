@@ -75,7 +75,7 @@ export function Dashboard() {
           <div className="flex-1 min-w-0">
             <h1 className="text-base font-semibold text-white">{title}</h1>
             <p className="text-xs text-slate-500 hidden sm:block">
-              Heagent AI Employee · Gold Tier · Local-First Autonomous System
+              Heagent AI Employee · Gold Tier 100% · WhatsApp + Odoo + Social · Local-First
             </p>
           </div>
 

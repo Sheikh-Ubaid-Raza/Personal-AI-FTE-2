@@ -1,2 +1,21 @@
 2026-03-07 16:08:58: gio: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=99717247100-fefq3c1kii2ftr2bbfpfo34u9khk0osg.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A57247%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&state=pVWiNagCwWUXSfO14dRUGPMQADX323&access_type=offline: Operation not supported
 2026-03-08 06:51:07: gio: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=99717247100-fefq3c1kii2ftr2bbfpfo34u9khk0osg.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A47383%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&state=7EwtR9okyjmJ2mBtMGjwYJcw81d9SS&access_type=offline: Operation not supported
+2026-03-29 16:54:52: gio: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=99717247100-fefq3c1kii2ftr2bbfpfo34u9khk0osg.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A43055%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&state=y4BobWtz9t8NiQuyOMfw3d6q7eD2Bp&access_type=offline: Operation not supported
+2026-03-29 17:23:44: Traceback (most recent call last):
+2026-03-29 17:23:44:   File "/mnt/c/h-0/ai_employee_vault_bronze/gmail_watcher.py", line 432, in <module>
+2026-03-29 17:23:44:     main()
+2026-03-29 17:23:44:   File "/mnt/c/h-0/ai_employee_vault_bronze/gmail_watcher.py", line 368, in main
+2026-03-29 17:23:44:     service = get_gmail_service()
+2026-03-29 17:23:44:               ^^^^^^^^^^^^^^^^^^^
+2026-03-29 17:23:44:   File "/mnt/c/h-0/ai_employee_vault_bronze/gmail_watcher.py", line 115, in get_gmail_service
+2026-03-29 17:23:44:     creds = flow.run_local_server(port=0)
+2026-03-29 17:23:44:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-29 17:23:44:   File "/home/ubaidraza/.local/lib/python3.12/site-packages/google_auth_oauthlib/flow.py", line 453, in run_local_server
+2026-03-29 17:23:44:     local_server.handle_request()
+2026-03-29 17:23:44:   File "/usr/lib/python3.12/socketserver.py", line 297, in handle_request
+2026-03-29 17:23:44:     if selector.select(timeout):
+2026-03-29 17:23:44:   ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-29 17:23:44:   File "/usr/lib/python3.12/selectors.py", line 415, in select
+2026-03-29 17:23:44:     fd_event_list = self._selector.poll(timeout)
+2026-03-29 17:23:44:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-29 17:23:44: KeyboardInterrupt
